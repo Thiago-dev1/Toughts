@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .main-container {
+    max-width: 120rem;
+    margin: 0 auto;
+} */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 3rem;
+    border-bottom: 0.2rem solid goldenrod;
+}
+
+.main-header img {
+    width: 4.4rem;
+}
+
+.main-header .main-nav ul {
+    display: flex;   
+    gap: 1.6rem;
+    font-size: 1.8rem;
+}
+
+.main-nav a {
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.main-nav a:hover {
+    color: blue;
+}
