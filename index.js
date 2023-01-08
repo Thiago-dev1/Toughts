@@ -7,6 +7,10 @@ const flash = require('express-flash')
 
 const conn = require('./db/conn')
 
+// Models
+const Tought = require('./models/Tought')
+const User = require('./models/User')
+
 
 const app = express()
 
@@ -47,7 +51,7 @@ app.use((req, res, next) => {
     if(req.session.userId) {
         res.locals.session = req.session
     }
-
+  
     next()
 })
 
@@ -57,6 +61,7 @@ app.get('/', (req, res) => {
 })
 
 conn
+    // .sync({force: true})
     .sync()
     .then(() =>{
         app.listen(3000, () => console.log('Server ON'))
