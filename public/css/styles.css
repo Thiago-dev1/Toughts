@@ -1,4 +1,11 @@
+:root {
+    --primary-color: #222;
+    --secondary-color: #F6982D;
+    --white-color: #FFF;
+}
+
 * {
+    font-family: Helvetica;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,8 +17,8 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: black;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 ul {
@@ -35,6 +42,7 @@ button {
 /* class gerais */
 .main-container {
     max-width: 90rem;
+    min-height: 60vh;
     margin: 0 auto;
 }
 
@@ -44,7 +52,7 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 1.4rem 3rem;
-    border-bottom: 0.2rem solid goldenrod;
+    border-bottom: 0.2rem solid var(--secondary-color);
 }
 
 .main-header img {
@@ -58,18 +66,19 @@ button {
 }
 
 .main-nav a {
-    color: white;
+    color: var(--white-color);
     transition: all 300ms ease-in-out;
 }
 
 .main-nav a:hover {
-    color: blue;
+    color: var(--secondary-color);
 }
 
 
 /* HOME */
 
 .home-container {
+    height: 60vh;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -77,7 +86,7 @@ button {
 }
 
 .home-container h1 span {
-    color: goldenrod;
+    color: var(--secondary-color);
 }
 
 .search {
@@ -97,23 +106,23 @@ button {
     background-color: transparent;
     border: none;
     border-bottom: 0.2rem solid gray;
-    color: white;
+    color: var(--white-color);
     font-size: 1.6rem;   
 }
 
 .search .search-input button {
     background-color: transparent;
-    color: goldenrod;
+    color: var(--secondary-color);
     font-weight: bold;
-    border: 0.2rem solid goldenrod;
+    border: 0.2rem solid var(--secondary-color);
     border-radius: 0.5rem;
     width: 8rem;
     transition: all 300ms ease-in-out;
 }
 
 .search .search-input button:hover {
-    background-color: goldenrod;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
 }
 
 .search .search-option {
@@ -130,12 +139,13 @@ button {
 
 .search .search-option button {
     background-color: transparent;
-    color: white;
+    color: var(--white-color);
     transition: all 300ms ease-in-out;
+    border: none;
 }
 
 .search .search-option button:hover {
-    color: goldenrod;
+    color: var(--secondary-color);
 }
 
 .post {
@@ -157,5 +167,5 @@ button {
 }
 
 .post .author span {
-    color: goldenrod;
+    color: var(--secondary-color);
 }
