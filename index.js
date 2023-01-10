@@ -10,6 +10,7 @@ const conn = require('./db/conn')
 // Models
 const Tought = require('./models/Tought')
 const User = require('./models/User')
+const router = require('./routes')
 
 
 const app = express()
@@ -55,10 +56,7 @@ app.use((req, res, next) => {
     next()
 })
 
-
-app.get('/', (req, res) => {
-    res.render('home')
-})
+app.use(router)
 
 conn
     // .sync({force: true})
