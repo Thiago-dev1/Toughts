@@ -17,12 +17,22 @@
                 <li>
                     <a href="#">Pensamentos</a>
                 </li>
-                <li>
-                    <a href="#">Entrar</a>
-                </li>
-                <li>
-                    <a href="#">Registrar</a>
-                </li>
+                {{#if session.userId}}
+                    <li>
+                        <a href="#">DashBoard</a>
+                    </li>
+                    <li>
+                        <a href="#">Sair</a>
+                    </li>
+
+                {{else}}
+                    <li>
+                        <a href="/entrar">Entrar</a>
+                    </li>
+                    <li>
+                        <a href="/cadastrar">Registrar</a>
+                    </li>
+                {{/if}}
             </ul>
         </nav>
     </header>

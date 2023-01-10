@@ -40,8 +40,11 @@ class AuthController {
         try {
             const user = await User.create({name, email, password: passwordHash})
             
-            res.redirect('/')
-            
+            req.session.userId = user.id
+
+            req.session.save(() => {
+                res.redirect('/')
+            })
         } catch (err) {
             console.log(err)
         }       
