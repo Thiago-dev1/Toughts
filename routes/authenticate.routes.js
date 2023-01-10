@@ -6,5 +6,7 @@ const authenticateRoutes = Router()
 authenticateRoutes.get('/entrar', AuthController.login)
 authenticateRoutes.get('/cadastrar', AuthController.register)
 
+authenticateRoutes.post('/cadastrar', AuthController.createAcconut)
+
 
 module.exports = authenticateRoutes
