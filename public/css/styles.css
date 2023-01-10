@@ -22,11 +22,23 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* .main-container {
     max-width: 120rem;
     margin: 0 auto;
 } */
 
+
+/* class gerais */
+.main-container {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+/* header */
 .main-header {
     display: flex;
     align-items: center;
@@ -52,4 +64,98 @@ a {
 
 .main-nav a:hover {
     color: blue;
+}
+
+
+/* HOME */
+
+.home-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-container h1 span {
+    color: goldenrod;
+}
+
+.search {
+    margin-top: 3.2rem;
+    width: 55rem;
+}
+
+.search .search-input {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.search .search-input input {
+    flex: 1;
+    padding: 0.8rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid gray;
+    color: white;
+    font-size: 1.6rem;   
+}
+
+.search .search-input button {
+    background-color: transparent;
+    color: goldenrod;
+    font-weight: bold;
+    border: 0.2rem solid goldenrod;
+    border-radius: 0.5rem;
+    width: 8rem;
+    transition: all 300ms ease-in-out;
+}
+
+.search .search-input button:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+.search .search-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.search .search-option span {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.search .search-option button {
+    background-color: transparent;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.search .search-option button:hover {
+    color: goldenrod;
+}
+
+.post {
+    margin-top: 3.2rem;
+    width: 55rem;
+    border-bottom: 0.1rem solid gray;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.post .post-title {
+    font-size: 3.2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.post .author {
+    font-size: 1.8rem;
+}
+
+.post .author span {
+    color: goldenrod;
 }
