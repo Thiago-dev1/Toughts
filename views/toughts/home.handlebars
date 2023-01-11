@@ -12,20 +12,10 @@
             <button>Limpar</button>
         </div>
     </div>
-    <div class="post">
-        <p class="post-title">"Node é muito bom!"</p>
-        <p class="author">por <span>thiago@gmail.com</span></p>
-    </div>
-    <div class="post">
-        <p class="post-title">"Node é muito bom!"</p>
-        <p class="author">por <span>thiago@gmail.com</span></p>
-    </div>
-    <div class="post">
-        <p class="post-title">"Node é muito bom!"</p>
-        <p class="author">por <span>thiago@gmail.com</span></p>
-    </div>
-    <div class="post">
-        <p class="post-title">"Node é muito bom!"</p>
-        <p class="author">por <span>thiago@gmail.com</span></p>
-    </div>
+    {{#each toughts}}
+        <div class="post">
+            <p class="post-title">"{{this.title}}"</p>
+            <p class="author">por <span>{{this.User.email}}</span></p>
+        </div>
+    {{/each}}
 </main>

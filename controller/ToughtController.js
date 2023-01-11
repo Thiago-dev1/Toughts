@@ -1,8 +1,12 @@
 const Tought = require('../models/Tought')
+const User = require('../models/User')
 
 class ToughtController {
     static async showToughts(req, res) {
-        res.render('toughts/home')
+
+        const toughts = await Tought.findAll({raw: true, nest: true, include: [{model: User}]})
+
+        res.render('toughts/home', { toughts }) 
     }
 
     static async dashboard(req, res) {
