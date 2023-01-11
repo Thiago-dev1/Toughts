@@ -41,9 +41,11 @@ button {
 
 /* class gerais */
 .main-container {
-    max-width: 90rem;
+    min-width: 100vh;
     min-height: 60vh;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .error {
@@ -271,6 +273,59 @@ button {
 }
 
 .register-footer a{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.dashboard-container {
+
+    height: 60vh;
+    width: 120rem;
+    margin-top: 3.2rem;
+}
+
+.dashboard-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-container div h1 {
+    margin-bottom: 3.2rem;
+    font-size: 3.2rem;
+    padding: 0.6rem;
+    border-left: 0.4rem solid var(--secondary-color);
+}
+
+.dashboard-container div a {
+    color: var(--secondary-color);
+    border: 0.2rem solid var(--secondary-color);
+    border-radius: 0.3rem;
+    /* padding: 1rem 2.6rem; */
+    width: 22rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-container div a:hover {
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+}
+
+.dashboard-container main {
+    height: 100%;
+}
+
+.dashboard-container main span {
+    display: block;
+    margin-top: 3.2rem;
+}
+
+.dashboard-container main span a {
     color: var(--secondary-color);
     text-decoration: underline;
 }
