@@ -49,6 +49,11 @@ class AuthController {
             console.log(err)
         }       
     }
+
+    static logout(req, res) {
+        req.session.destroy()
+        res.redirect('/entrar')
+    }
 }
 
 module.exports = AuthController

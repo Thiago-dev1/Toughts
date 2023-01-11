@@ -7,6 +7,7 @@ authenticateRoutes.get('/entrar', AuthController.login)
 authenticateRoutes.get('/cadastrar', AuthController.register)
 
 authenticateRoutes.post('/cadastrar', AuthController.createAcconut)
+authenticateRoutes.get('/sair', AuthController.logout)
 
 
 module.exports = authenticateRoutes
