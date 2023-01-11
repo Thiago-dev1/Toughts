@@ -329,3 +329,46 @@ button {
     color: var(--secondary-color);
     text-decoration: underline;
 }
+
+/* PAGE ADDTOUGHT */
+
+.addTought {
+    margin-top: 3.2rem;
+    height: 60vh;
+    width: 55rem;
+}
+
+.addTought a {
+    margin-bottom: 3.2rem;
+    display: block;
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.addTought a:hover {
+    color: var(--white-color);
+}
+
+.addTought h1 {
+    margin-bottom: 3.2rem;
+    font-size: 3.2rem;
+    padding: 0.6rem;
+    border-left: 0.4rem solid var(--secondary-color);
+}
+
+.addTought button {
+    margin-top: 3.2rem;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 0.3rem solid var(--secondary-color);
+    border-radius: 0.6rem;
+    font-size: 1.8rem;
+    width: 20rem;
+    height: 5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.addTought button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}

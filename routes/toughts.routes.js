@@ -5,5 +5,6 @@ const toughtsRoutes = Router()
 
 toughtsRoutes.get('/', ToughtController.showToughts)
 toughtsRoutes.get('/dashboard', ToughtController.dashboard)
+toughtsRoutes.get('/criar', ToughtController.addToughts)
 
 module.exports = toughtsRoutes
