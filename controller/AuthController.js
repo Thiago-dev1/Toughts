@@ -1,4 +1,4 @@
-const { hash } = require('bcryptjs')
+const { hash, compare } = require('bcryptjs')
 const User = require('../models/User')
 
 class AuthController {
@@ -53,6 +53,42 @@ class AuthController {
     static logout(req, res) {
         req.session.destroy()
         res.redirect('/entrar')
+    }
+
+    static async signIn(req, res) {
+        const { email, password } = req.body
+
+        const user = await User.findOne({where: {email : email}})
+
+        const data = {email, password, message: ''}
+
+        if(!user) {
+            data.message = 'Email invalido!'
+
+            res.render('auth/login', { data })
+            return
+        }
+
+
+        const passwordMatch = await compare(password, user.password)
+
+        if(!passwordMatch) {
+            data.message = 'Senha invalido!!'
+
+            res.render('auth/login', { data })
+            return 
+        }
+
+        try {
+
+            req.session.userId = user.id
+
+            req.session.save(() => {
+                res.redirect('/')
+            })
+        } catch (err) {
+            console.log(err)
+        }
     }
 }
 

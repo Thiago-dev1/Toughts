@@ -1,15 +1,16 @@
 <div class="login-container">
     <h1>Entrar</h1>
-    <form>
+    <form action="/signIn" method="post">
         <div class="form-content">
             <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" placeholder="Digete seu email">
+            <input type="email" name="email" {{#if data }} value={{data.email}} {{/if}} id="email" placeholder="Digete seu email">
         </div>
         <div class="form-content">
             <label for="password">Senha:</label>
-            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            <input type="password" name="password" {{#if data }} value={{data.password}} {{/if}} id="password" placeholder="Digite sua senha">
         </div>
-        <button>Entrar</button>
+        {{#if data }} <p class="error">{{data.message}}</p> {{/if}}
+        <button type="">Entrar</button>
     </form>
     <div class="login-footer">
         <span>Não tem conta?</span>
