@@ -5,7 +5,7 @@
     </div>
     <main>
         <h2>Seus pensamentos:</h2>
-
+ 
         {{#each toughts}}
             <div class="tought">
                 <p>{{this.title}}</p>
@@ -17,11 +17,11 @@
                     </form>
                 </div>
             </div>
-
         {{/each}}
 
+        {{#unless toughts}}
+            <span>Ainda não há nenhum pensamento cadastrado, crie o seu <a href="/toughts/criar">clicando aqui</a></span>
+        {{/unless }}
 
-
-        {{!-- <span>Ainda não há nenhum pensamento cadastrado, crie o seu <a href="/toughts/criar">clicando aqui</a></span> --}}
     </main>
 </div>
