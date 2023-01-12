@@ -34,6 +34,35 @@ class ToughtController {
         }
     }
 
+    static async edit(req, res) {
+        const { id } = req.params
+
+
+        try {
+
+            const tought = await Tought.findOne({where: {id: id}, raw: true})
+
+
+            res.render('toughts/editTought', { tought })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    static async editPost(req, res) {
+        const { id } = req.params
+        const { title } = req.body
+
+        try {
+
+            await Tought.update({title: title}, {where: {id: id}})
+
+            res.redirect('/toughts/dashboard')
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    
     static async delete(req, res) {
         const { id } = req.params
 
