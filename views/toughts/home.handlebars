@@ -18,4 +18,8 @@
             <p class="author">por <span>{{this.User.email}}</span></p>
         </div>
     {{/each}}
+
+    {{#unless toughts}}
+            <span>Ainda não há nenhum pensamento cadastrado, crie o seu <a href="/toughts/criar">clicando aqui</a></span>
+    {{/unless }}
 </main>
