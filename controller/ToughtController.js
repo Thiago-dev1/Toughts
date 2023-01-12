@@ -34,6 +34,20 @@ class ToughtController {
         }
     }
 
+    static async delete(req, res) {
+        const { id } = req.params
+
+        try {
+
+            await Tought.destroy({where: {id : id}})
+
+            res.redirect('/toughts/dashboard')
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
+
 }
 
 module.exports = ToughtController
