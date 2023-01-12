@@ -284,20 +284,24 @@ button {
     margin-top: 3.2rem;
 }
 
-.dashboard-container div {
+.dashboard-container main h2 {
+    margin-bottom: 3.2rem;
+}
+
+.dashboard-container .top-dashboard {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.dashboard-container div h1 {
+.dashboard-container .top-dashboard h1 {
     margin-bottom: 3.2rem;
     font-size: 3.2rem;
     padding: 0.6rem;
     border-left: 0.4rem solid var(--secondary-color);
 }
 
-.dashboard-container div a {
+.dashboard-container .top-dashboard a {
     color: var(--secondary-color);
     border: 0.2rem solid var(--secondary-color);
     border-radius: 0.3rem;
@@ -311,7 +315,7 @@ button {
     justify-content: center;
 }
 
-.dashboard-container div a:hover {
+.dashboard-container .top-dashboard a:hover {
     color: var(--white-color);
     background-color: var(--secondary-color);
 }
@@ -328,6 +332,44 @@ button {
 .dashboard-container main span a {
     color: var(--secondary-color);
     text-decoration: underline;
+}
+
+.dashboard-container main .tought {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-bottom: 3.2rem;
+    border-bottom: 0.3rem solid var(--secondary-color);
+}
+
+.tought p {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.tought div {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.tought a, .tought button {
+    background-color: transparent;
+    width: 9.2rem;
+    height: 4rem;
+    border: 0.2rem solid var(--white-color);
+    border-radius: 0.6rem;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tought a:hover, .tought button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* PAGE ADDTOUGHT */

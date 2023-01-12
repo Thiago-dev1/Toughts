@@ -10,7 +10,11 @@ class ToughtController {
     }
 
     static async dashboard(req, res) {
-        res.render('toughts/dashboard')
+        const userId = req.session.userId
+
+        const toughts = await Tought.findAll({where: {userId: userId}, raw: true})
+
+        res.render('toughts/dashboard', {toughts})
     }
 
     static async addToughts(req, res) {
