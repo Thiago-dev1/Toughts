@@ -53,9 +53,11 @@ class ToughtController {
         const { id } = req.params
         const { title } = req.body
 
+        const userId = req.session.userId
+
         try {
 
-            await Tought.update({title: title}, {where: {id: id}})
+            await Tought.update({title: title}, {where: {id: id, UserId: userId}})
 
             res.redirect('/toughts/dashboard')
         } catch (err) {
@@ -65,10 +67,11 @@ class ToughtController {
     
     static async delete(req, res) {
         const { id } = req.params
+        const userId = req.session.userId
 
         try {
 
-            await Tought.destroy({where: {id : id}})
+            await Tought.destroy({where: {id : id, UserId: userId}})
 
             res.redirect('/toughts/dashboard')
         } catch (err) {
