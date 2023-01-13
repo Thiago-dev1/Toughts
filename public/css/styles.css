@@ -145,14 +145,16 @@ button {
     font-size: 1.8rem;
 }
 
-.search .search-option button {
+.search .search-option button, .search .search-option a {
     background-color: transparent;
     color: var(--white-color);
     transition: all 300ms ease-in-out;
     border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
 }
 
-.search .search-option button:hover {
+.search .search-option button:hover, .search .search-option a:hover {
     color: var(--secondary-color);
 }
 

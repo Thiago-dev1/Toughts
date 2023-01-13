@@ -1,15 +1,19 @@
 <main class="home-container">
     <h1>Conheças alguns dos nossos <span>Pensamentos</span>:</h1>
     <div class="search">
-        <div class="search-input">
-            <input type="text" placeholder="Está buscando por algo?">
+        <form action="/" method="get" class="search-input">
+            <input type="text" name="search" placeholder="Está buscando por algo?" {{#if search}} value="{{search}}" {{/if}}>
             <button>Buscar</button>
-        </div>
+        </form>
         <div class="search-option">
             <span>Ordenar por:</span>
-            <button>Mais novos</button>
-            <button>Mais antigos</button>
-            <button>Limpar</button>
+            <form action="/" method="get">
+                <button type="submit">Mais novos</button>
+            </form>
+            <form action="/" method="get">
+                <button>Mais antigos</button>
+            </form>
+            <a href="/">Limpar</a>
         </div>
     </div>
     {{#each toughts}}
