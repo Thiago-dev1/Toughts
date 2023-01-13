@@ -3,19 +3,19 @@
     <form action="/cadastrar" method="post">
         <div class="form-content">
             <label for="name">Nome:</label>
-            <input type="text" name="name" {{#if data }} value={{data.name}} {{/if}} id="name" placeholder="Digete seu nome">
+            <input type="text" name="name" {{#if data }} value={{data.name}} {{/if}} id="name" placeholder="Digete seu nome" required>
         </div>
         <div class="form-content">
             <label for="email">E-mail:</label>
-            <input type="email" name="email" {{#if data }} value={{data.email}} {{/if}} id="email" placeholder="Digete seu email">
+            <input type="email" name="email" {{#if data }} value={{data.email}} {{/if}} id="email" placeholder="Digete seu email" required>
         </div>
         <div class="form-content">
             <label for="password">Senha:</label>
-            <input type="password" name="password" {{#if data }} value={{data.password}} {{/if}} id="password" placeholder="Digite sua senha">
+            <input type="password" name="password" {{#if data }} value={{data.password}} {{/if}} id="password" placeholder="Digite sua senha" required>
         </div>
         <div class="form-content">
             <label for="passwordChecks">Confirmação da senha:</label>
-            <input type="password" name="passwordChecks" {{#if data }} value={{data.passwordChecks}} {{/if}} id="passwordChecks" placeholder="Confirme sua senha">
+            <input type="password" name="passwordChecks" {{#if data }} value={{data.passwordChecks}} {{/if}} id="passwordChecks" placeholder="Confirme sua senha" required>
         </div>
             {{#if data }} <p class="error">{{data.message}}</p> {{/if}}
         <button type="submit">Cadastrar</button>

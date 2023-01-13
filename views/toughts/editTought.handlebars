@@ -4,7 +4,7 @@
     <form action="/toughts/editar/{{tought.id}}" method="post">
         <div class="form-content">
             <label for="title">Titulo:</label>
-            <input type="text" name="title" id="title" value="{{tought.title}}">
+            <input type="text" name="title" id="title" value="{{tought.title}}" required>
         </div>
         <button type="submit">Editar pensamento</button>
     </form>
