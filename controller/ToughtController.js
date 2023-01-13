@@ -12,11 +12,20 @@ class ToughtController {
             search = req.query.search
         }
 
+        let order = 'DESC'
+
+        if(req.query.order == 'old') {
+            order = 'ASC'
+        } else {
+            order = 'DESC'
+        }
+
         const toughts = await Tought.findAll({
             raw: true, 
             nest: true, 
             include: [{model: User}],
-            where: { title: {[Op.like]: `%${search}%`} }
+            where: { title: {[Op.like]: `%${search}%`} },
+            order: [['createdAt', order]]
         })
 
         res.render('toughts/home', { toughts, search }) 
